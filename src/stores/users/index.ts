@@ -17,7 +17,7 @@ export const useUsers = defineStore("users", {
   },
   actions: {
     hello() {
-      console.log(`Hello i am ${this.fullName}`);
+      alert(`Hello i am ${this.fullName}`);
     },
   },
 });
