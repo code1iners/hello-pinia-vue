@@ -1,24 +1,7 @@
-# hello-pinia-vue
+# Hello Pinia
 
-## Project setup
-```
-npm install
-```
+this is a smallest Vue application sample for Pinia test.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## What learned?
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- [Pinia](https://pinia.vuejs.org/) : Globally state manager for **Typescript**.
