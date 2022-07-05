@@ -15,8 +15,8 @@
 </template>
 
 <script lang="ts">
-import { useUsers } from "@/stores";
 import { defineComponent } from "vue";
+import { useUsers } from "@/stores";
 
 export default defineComponent({
   name: "UsersPage",
