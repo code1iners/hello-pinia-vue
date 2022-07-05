@@ -1,27 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <main>
+    <div>First name : {{ users.firstName }}</div>
+    <div>Last name : {{ users.lastName }}</div>
+    <div>Full name : {{ users.fullName }}</div>
+    <button @click="onHelloClick">Hello</button>
+  </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import { useUsers } from "@/stores";
 
 export default defineComponent({
   name: "App",
-  components: {
-    HelloWorld,
+  components: {},
+  setup() {
+    // Declared useUsers store hook.
+    const users = useUsers();
+
+    // Hello button click event handler.
+    const onHelloClick = () => users.hello();
+
+    return {
+      users,
+      onHelloClick,
+    };
   },
 });
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
